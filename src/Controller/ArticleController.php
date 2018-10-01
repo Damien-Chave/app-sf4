@@ -17,14 +17,17 @@ class ArticleController extends AbstractController
 
 {
     /**
-     * @Route("/")
+     * @Route("/", name="app_homepage")
      */
     public function homepage()
     {
-        return new Response('The first page is created! WOOO! Try to find article news with /news URL');
+        return $this->render('article/homepage.html.twig', [
+            'title' => 'Home',
+        ]);
     }
+
     /**
-     * @Route("/news/{title}")
+     * @Route("/news/{title}", name="article_show")
      */
     public function show($title = 'THE ARTICLE TITLE')
 

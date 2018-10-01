@@ -15,7 +15,7 @@
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-bg mb-5">
-            <a style="margin-left: 75px;" class="navbar-brand space-brand" href="#">The Space Bar</a>
+            <a style="margin-left: 75px;" class="navbar-brand space-brand" href="{{ path('app_homepage') }}">The Space Bar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,7 +38,7 @@
                   <img class="nav-profile-img rounded-circle" src="{{ asset('images/astronaut-profile.png') }}">
                 </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="{{ path('_profiler_home') }}">Profile</a>
                             <a class="dropdown-item" href="#">Create Post</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
@@ -51,7 +51,7 @@
 
         <footer class="footer">
             <div class="container text-center">
-                <span class="text-muted">Made with <i class="fa fa-heart" style="color: red;"></i> by the guys and gals at <a href="https://knpuniversity.com">KnpUniversity</a></span>
+                <span class="text-muted">Modified with <i class="fa fa-heart" style="color: red;"></i> by DC at <a href="http://www.coding-academy.fr/la-formation" target="_blank">Coding Academy</a> by <a href="http://www.epitech.eu/coding-academy.aspx" target="_blank">EPITECH</a></span>
             </div>
         </footer>
 

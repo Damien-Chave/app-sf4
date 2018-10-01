@@ -7,34 +7,6 @@
 
     {#{{ dump() }}#}
 
-
-
-{#<div>#}
-    {#<p>#}
-        {#Bacon ipsum dolor amet filet mignon picanha kielbasa jowl hamburger shankle biltong chicken turkey pastrami cupim pork chop. Chicken andouille prosciutto capicola picanha, brisket t-bone. Tri-tip pig pork chop short ribs frankfurter pork ham. Landjaeger meatball meatloaf, kielbasa strip steak leberkas picanha swine chicken pancetta pork loin hamburger pork.#}
-    {#</p>#}
-    {#<p>#}
-        {#Kielbasa pork belly meatball cupim burgdoggen chuck turkey buffalo ground round leberkas cow shank short loin bacon alcatra. Leberkas short loin boudin swine, ham hock bresaola turducken tail pastrami picanha pancetta andouille rump landjaeger bacon. Pastrami swine rump meatball filet mignon turkey alcatra. Picanha filet mignon ground round tongue ham hock ball tip tri-tip, prosciutto leberkas kielbasa short loin short ribs drumstick. Flank pig kielbasa short loin jerky ham hock turducken prosciutto t-bone salami pork jowl.#}
-    {#</p>#}
-    {#<p>#}
-        {#Pastrami short loin pork chop, chicken kielbasa swine turducken jerky short ribs beef. Short ribs alcatra shoulder, flank pork chop shankle t-bone. Tail rump pork chop boudin pig, chicken porchetta. Shank doner biltong, capicola brisket sausage meatloaf beef ribs kevin beef rump ribeye t-bone. Shoulder cupim meatloaf, beef kevin frankfurter picanha bacon. Frankfurter bresaola chuck kevin buffalo strip steak pork loin beef ribs prosciutto picanha shankle. Drumstick prosciutto pancetta beef ribs.#}
-    {#</p>#}
-{#</div>#}
-
-{#<h2>Comments ({{  comments|length }}) </h2>#}
-
-{#<ul>#}
-
-    {#{% for comment in comments %}#}
-
-        {#<li>{{ comment }}</li>#}
-
-    {#{% endfor %}#}
-
-{#</ul>#}
-
-
-
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -47,7 +19,7 @@
                             <br>
                             <span class="align-left article-details"><img class="article-author-img rounded-circle" src="{{ asset('images/alien-profile.png') }}"> Mike Ferengi </span>
                             <span class="pl-2 article-details"> 3 hours ago</span>
-                            <span class="pl-2 article-details"> 5 <a href="#" class="fa fa-heart-o like-article"></a> </span>
+                            <span class="pl-2 article-details js-like-article-count"> 5 <a href="#" class="fa fa-heart-o like-article js-like-article"></a> </span>
                         </div>
                     </div>
                 </div>
@@ -127,5 +99,13 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    <script src="{{ asset('js/article_show.js') }}"></script>
 
 {% endblock %}
